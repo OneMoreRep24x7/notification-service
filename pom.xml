@@ -95,7 +95,7 @@
 	</dependencyManagement>
 
 	<build>
-
+	<finalName>notificationservice-onemorerep</finalName>
 		<plugins>
 
 			<plugin>
