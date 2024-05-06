@@ -4,19 +4,20 @@ spring:
   config:
     import: "optional:configserver:http://3.109.184.195:8888"
   kafka:
-      consumer:
-        bootstrap-servers: 13.233.4.27:9092
-        group-id: OneMoreRep-group
-        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-        value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-        properties:
-          spring:
-            json:
-              value:
-                default:
-                  type: 'com.ashish.notificationservice.dto.MsgDTO'
-              type:
-                mapping: 'com.ashish.planservice.dto.MsgDTO:com.ashish.notificationservice.dto.MsgDTO'
+    consumer:
+      bootstrap-servers: 15.206.80.123:9092 # Update with the correct IP address and port
+      group-id: OneMoreRep-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            value:
+              default:
+                type: 'com.ashish.notificationservice.dto.MsgDTO'
+            type:
+              mapping: 'com.ashish.planservice.dto.MsgDTO:com.ashish.notificationservice.dto.MsgDTO'
+
   mail:
     host: smtp.gmail.com
     username: onemorerep24x7@gmail.com
