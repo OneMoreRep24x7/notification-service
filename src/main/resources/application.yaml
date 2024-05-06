@@ -5,7 +5,7 @@ spring:
     import: "optional:configserver:http://3.111.235.72:8888"
   kafka:
     consumer:
-      bootstrap-servers: 65.1.243.55:9092 # Update with the correct IP address and port
+      bootstrap-servers: 65.1.243.55:9093 # Update with the correct IP address and port
       group-id: OneMoreRep-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
