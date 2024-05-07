@@ -12,17 +12,17 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class KafkaMessageListener {
 
-    @Autowired
-    private EmailService emailService;
-    @Autowired
-    private SMSService smsService;
-    @KafkaListener(topics = "OneMoreRep",groupId = "OneMoreRep-group")
-    public void consumeEvents(MsgDTO message) throws MessagingException {
-        log.info("consumer consume the events {} ",message.toString());
-
-        emailService.sendPlanDetails(message);
-        smsService.sendSMS(message);
-
-
-    }
+//    @Autowired
+//    private EmailService emailService;
+//    @Autowired
+//    private SMSService smsService;
+//    @KafkaListener(topics = "OneMoreRep",groupId = "OneMoreRep-group")
+//    public void consumeEvents(MsgDTO message) throws MessagingException {
+//        log.info("consumer consume the events {} ",message.toString());
+//
+//        emailService.sendPlanDetails(message);
+//        smsService.sendSMS(message);
+//
+//
+//    }
 }
